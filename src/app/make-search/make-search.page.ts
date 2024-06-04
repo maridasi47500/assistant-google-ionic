@@ -71,8 +71,7 @@ private searchService: SearchService
         .createSearch(this.searchForm.value)
         .then((res) => {
           console.log(res);
-          this.searchForm.reset();
-          this.router.navigate(['/make-search/'+this.id]);
+          //this.router.navigate(['/make-search/'+this.id]);
         })
         .catch((error) => console.log(error));
     }
