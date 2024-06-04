@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+    <ion-title class="ios title-ios hydrated">Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="searchForm" (ngSubmit)="formSubmit()">
+        <ion-input formControlName="cat_id" type="hidden" required value=""></ion-input>
+      <ion-item>
+        <ion-label position="floating">content</ion-label>
+        <ion-input formControlName="content" type="text" required></ion-input>
+      </ion-item>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Book Search</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+ <ion-list class="ios list-ios hydrated">
+    <ion-list-header class="ios hydrated">
+      Appointments
+    </ion-list-header>
+
+    <ion-item *ngFor="let search of Searchs" class="user-list">
+      <ion-label>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{search.content}}
+        </h5>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/edit-appointment/', search.$key]">
+          <ion-icon name="create" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="deleteSearch(search.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
