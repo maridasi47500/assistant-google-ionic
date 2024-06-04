@@ -36,7 +36,7 @@ export class EditSearchPage implements OnInit {
   updateForm() {
     this.aptService.updateSearch(this.id, this.updateSearchForm.value)
       .then(() => {
-        this.router.navigate(['/make-search/'+this.id]);
+        this.router.navigate(['/make-search/'+this.updateSearchForm.value.cat_id]);
       })
       .catch(error => console.log(error));
   }

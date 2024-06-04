@@ -12,7 +12,7 @@
     <form [formGroup]="searchForm" (ngSubmit)="formSubmit()">
         <ion-input formControlName="cat_id" type="hidden" required value=""></ion-input>
       <ion-item>
-        <ion-label position="floating">content</ion-label>
+        <ion-label position="floating">content:</ion-label>
         <ion-input formControlName="content" type="text" required></ion-input>
       </ion-item>
 
@@ -32,12 +32,12 @@
     <ion-item *ngFor="let search of Searchs" class="user-list">
       <ion-label>
         <h5>
-          <ion-icon name="person"></ion-icon> {{search.content}}
+		<ion-icon name="person"></ion-icon> <blockquote>ok google,{{search.content}}</blockquote>
         </h5>
       </ion-label>
 
       <div class="item-note" item-end>
-        <button ion-button clear [routerLink]="['/edit-appointment/', search.$key]">
+        <button ion-button clear [routerLink]="['/edit-search/', search.$key]">
           <ion-icon name="create" style="zoom:2.0"></ion-icon>
         </button>
         <button ion-button clear (click)="deleteSearch(search.$key)">
