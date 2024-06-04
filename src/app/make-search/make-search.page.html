@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar class="ios hydrated">
-    <ion-title class="ios title-ios hydrated">Search</ion-title>
+			        <ion-buttons slot="start">
+					<ion-button href="/home"><ion-icon name="chevron-back-outline"></ion-icon> Back</ion-button>
+						          </ion-buttons>
+	  <ion-title class="ios title-ios hydrated">{{id.replace("-"," ")}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,14 +19,14 @@
 
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="primary" shape="full" expand="block">Book Search</ion-button>
+          <ion-button type="submit" color="primary" shape="full" expand="block">ajouter 1 search</ion-button>
         </ion-col>
       </ion-row>
     </form>
   </ion-list>
  <ion-list class="ios list-ios hydrated">
     <ion-list-header class="ios hydrated">
-      Appointments
+	    My search about {{this.id.replace("-"," ")}}
     </ion-list-header>
 
     <ion-item *ngFor="let search of Searchs" class="user-list">

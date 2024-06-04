@@ -11,6 +11,13 @@ export class HomePage {
 imgElmt: HTMLCollection;
 
   constructor() {}
+  myassistant($ev:any){
+	  console.log($ev.target);
+    var shadow=$ev.target.shadowRoot.children[0];
+    console.log(shadow);
+    var y = (shadow as HTMLElement).getAttribute("aria-label");
+    window.location.pathname="/make-search/"+this.parameterize(y);
+  }
   ngAfterViewInit(){
 this.imgElmt = this.newscont.nativeElement.getElementsByTagName('ion-button');
  console.log(this.imgElmt);
@@ -18,15 +25,12 @@ for (var i=0;i++;i<this.imgElmt.length){
 this.imgElmt[i].innerHTML+="<ion-label>"+this.imgElmt[i].getAttribute("aria-label")+"</ion-label>";
 
 }
-
   }
+
 parameterize (str1:any) {
     // Trim leading and trailing whitespace, convert to lowercase, and replace non-alphanumeric characters with an empty string
     return str1.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-");
 };
-  myassistant($ev:any){
-    var x=$ev.target.getAttribute("aria-label")
-    window.location.pathname="/voirtout/"+this.parameterize(x);
-  }
+
 
 }

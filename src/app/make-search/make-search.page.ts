@@ -12,19 +12,19 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class MakeSearchPage implements OnInit {
   searchForm: FormGroup;
+  id:any;
   Searchs:any=[];
 
   constructor(
-    private searchService: SearchService,
     private router: Router,
     private actRoute: ActivatedRoute,
     public fb: FormBuilder,
 private searchService: SearchService
   ) {
     this.id = this.actRoute.snapshot.paramMap.get('id');
-    this.aptService.getSearch(this.id).valueChanges().subscribe(res => {
-      this.updateSearchForm.setValue(res);
-    });
+    /*this.searchService.getSearch(this.id).valueChanges().subscribe(res => {
+      this.searchForm.setValue(res);
+    });*/
 
 
 }
@@ -41,7 +41,7 @@ private searchService: SearchService
       res.forEach((item) => {
         let a: any = item.payload.toJSON();
         a['$key'] = item.key;
-        if (this.id === item.cat_id){
+        if (this.id === a["cat_id"]){
         this.Searchs.push(a as Search);
         }
       });

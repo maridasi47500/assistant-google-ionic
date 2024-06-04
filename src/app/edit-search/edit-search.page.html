@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Edit Appointment
+      Edit Search
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list lines="full">
-    <form [formGroup]="updateBookingForm" (ngSubmit)="updateForm()">
+    <form [formGroup]="updateSearchForm" (ngSubmit)="updateForm()">
         <ion-input formControlName="cat_id" type="hidden" required value=""></ion-input>
 
       <ion-item>
@@ -19,7 +19,7 @@
 
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="primary" shape="full" expand="block">Update Appointment</ion-button>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Update Search</ion-button>
         </ion-col>
       </ion-row>
     </form>
