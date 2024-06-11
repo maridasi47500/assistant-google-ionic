@@ -40,6 +40,7 @@
     "@angular/compiler-cli": "^17.0.2",
     "@angular/language-service": "^17.0.2",
     "@ionic/angular-toolkit": "^11.0.1",
+    "@ionic/lab": "3.2.15",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
