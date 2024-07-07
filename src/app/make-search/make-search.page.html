@@ -43,6 +43,9 @@
         <button ion-button clear (click)="deleteSearch(search.$key)">
           <ion-icon name="trash" style="zoom:2.0"></ion-icon>
         </button>
+        <button ion-button clear (click)="translateSearch(search.content)">
+           <ion-icon name="language-outline"></ion-icon> 
+        </button>
       </div>
     </ion-item>
   </ion-list>

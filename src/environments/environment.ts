@@ -6,17 +6,19 @@ export const environment = {
   production: false,
 firebaseConfig: {
 
-  apiKey: "AIzaSyD1nKMSuXdAETjVsB8qjWXlkTGBjzYJZus",
+  apiKey: "AIzaSyByTg-yZpq2PXNhaIoA3lcvjh-iZQaW1Eg",
 
-  authDomain: "ok--assistant-75041.firebaseapp.com",
+  authDomain: "ok-f033b.firebaseapp.com",
 
-  projectId: "ok--assistant-75041",
+  databaseURL: "https://ok-f033b-default-rtdb.firebaseio.com",
 
-  storageBucket: "ok--assistant-75041.appspot.com",
+  projectId: "ok-f033b",
 
-  messagingSenderId: "459482057800",
+  storageBucket: "ok-f033b.appspot.com",
 
-  appId: "1:459482057800:web:f897be09865f138eecdc7d"
+  messagingSenderId: "249484431496",
+
+  appId: "1:249484431496:web:5d50293f5b49563bae8f3d"
 
 }
 };

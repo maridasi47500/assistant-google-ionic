@@ -56,6 +56,10 @@ private searchService: SearchService
       });
   }
 
+  translateSearch(mystring: any) {
+    console.log(mystring);
+    window.location.href="https://translate.google.com/?sl=fr&tl=en&text="+encodeURIComponent("ok google,"+mystring)+"&op=translate";  
+  }
   deleteSearch(id: any) {
     console.log(id);
     if (window.confirm('Do you really want to delete?')) {
